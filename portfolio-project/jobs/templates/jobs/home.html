@@ -1,16 +1,15 @@
-Hi!
-
-
 <!doctype html>
 <html lang="en">
+
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    
 
-    <title>Album example for Bootstrap</title>
+    <title>Tehmeer Ali Paryani</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,15 +22,15 @@ Hi!
 
     <header>
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                              <a class="navbar-brand" href="#">Tehmeer Ali Paryani</a>
+                              <a class="navbar-brand" href="{% url 'home' %}">Tehmeer Ali Paryani</a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
-                          <a class="nav-item nav-link" href="#">Twitter </a>
-                          <a class="nav-item nav-link" href="#">Resume</a>
-                          <a class="nav-item nav-link" href="#">Blog</a>
+                          <a class="nav-item nav-link" href="http://www.twitter.com">Twitter </a>
+                          <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+                          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
 
                         </div>
                       </div>
@@ -48,6 +47,9 @@ Hi!
             <a href="mailto:freelanceali786@gmail.com" class="btn btn-primary my-2">Email Me</a>
 
           </p>
+
+            <img src="{% static 'nick.jpg' %}"  height="300" />
+
         </div>
       </section>
 
